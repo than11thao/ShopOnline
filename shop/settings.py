@@ -230,3 +230,5 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'ngov6769@gmail.com'
 EMAIL_HOST_PASSWORD = 'eykpokxucornnvbn'
+
+CSRF_TRUSTED_ORIGINS = ['https://shoponline-bv5y.onrender.com','https://*.127.0.0.1']
