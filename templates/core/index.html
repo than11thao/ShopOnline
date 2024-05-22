@@ -93,7 +93,7 @@
                                 <input type="text" hidden=true value="{{ productHot.id }}" class="product-id-{{productHot.id}}">
                                 <input type="text" hidden=true value="{{ productHot.title }}" class="product-title-{{productHot.id}}">
                                 <button data-index="{{ productHot.id }}" class="btn-add-cart" onclick="dataLayer.push({ 'ecommerce': null });dataLayer.push({
-                                    'event': 'add_to_cart',
+                                    'event': 'gtm.click',
                                     'ecommerce': {
                                             'items': [{
                                                 'pid': '{{ productHot.id }}',
