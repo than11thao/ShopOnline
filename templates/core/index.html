@@ -92,7 +92,21 @@
                                 <input type="text" hidden=true value="{{ productHot.image.url }}" class="product-image-{{productHot.id}}">
                                 <input type="text" hidden=true value="{{ productHot.id }}" class="product-id-{{productHot.id}}">
                                 <input type="text" hidden=true value="{{ productHot.title }}" class="product-title-{{productHot.id}}">
-                                <button data-index="{{ productHot.id }}" class="btn-add-cart"><i class="fa fa-shopping-cart"></i>Add</button>
+                                <button data-index="{{ productHot.id }}" class="btn-add-cart" onclick="dataLayer.push({ 'ecommerce': null });dataLayer.push({
+                                    'event': 'add_to_cart',
+                                    'ecommerce': {
+                                            'items': [{
+                                                'pid': '{{ productHot.id }}',
+                                                'title': '{{ productHot.title}}',
+                                                'image': '{{ productHot.image.url}}',
+                                                'price': '{{ productHot.price}}'
+                                            }]
+                                        }
+                                    });">
+                                    
+                                    <i class="fa fa-shopping-cart"></i>
+                                    Add
+                                </button>
                             </div>
                             <div class="products-hot__item__sale">
                                 <span class="title">New</span>
